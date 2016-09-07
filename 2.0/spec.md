@@ -67,6 +67,10 @@ The following key is RECOMMENDED
   * `o5m` for [o5m](http://wiki.openstreetmap.org/wiki/O5m) encoded data in the OpenStreetMap data model
   * `mvt` for [Mapbox Vector Tiles](https://github.com/mapbox/vector-tile-spec)
 
+* `compression`: The type of compression applied on top of the tile data. The value SHALL a valid [HTTP Content](http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding) name.
+
+  Decoders MAY assume per-format defaults if the key is not present.
+
 The following keys are OPTIONAL
 
 * `bounds`: The maximum extent of the rendered map area. Bounds must define an
