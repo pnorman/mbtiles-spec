@@ -45,15 +45,29 @@ This table MUST yield exactly two columns named `name` and
 
 #### Content
 
-The metadata table is used as a key/value store for settings. It MUST have the following five keys:
+The metadata table is used as a key/value store for settings.
+
+The following keys are REQUIRED
 
 * `name`: The plain-english name of the tileset.
 * `type`: `overlay` or `baselayer`
 * `version`: The version of the tileset, as a plain number.
 * `description`: A description of the layer as plain text.
-* `format`: The image file format of the tile data: `png` or `jpg`
 
-The following keys in `metadata` are OPTIONAL
+The following key is RECOMMENDED
+
+* `format`: The file format of the tile data.
+
+  If the format is one of the following common formats, the string given in this table list SHOULD be used
+
+  * `jpg` for JPEG images
+  * `png` for PNG images
+  * `geojson` for [GeoJSON](http://geojson.org/) encoded data
+  * `topojson` for [TopoJSON](https://github.com/mbostock/topojson) encoded data
+  * `o5m` for [o5m](http://wiki.openstreetmap.org/wiki/O5m) encoded data in the OpenStreetMap data model
+  * `mvt` for [Mapbox Vector Tiles](https://github.com/mapbox/vector-tile-spec)
+
+The following keys are OPTIONAL
 
 * `bounds`: The maximum extent of the rendered map area. Bounds must define an
   area covered by all zoom levels. The bounds are represented in `WGS:84` -
@@ -82,12 +96,7 @@ The `zoom_level`, `tile_column`, and `tile_row` columns MUST the
 [Tile Map Service Specification](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification) in
 their construction, except the [global-mercator](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-mercator) (aka Spherical Mercator) MUST be used.
 
-The `tile_data blob` column contains raw image data in binary.
-
-A subset of image file formats are permitted:
-
-* `png`
-* `jpg`
+The `tile_data blob` column contains raw tile data in binary. If the `format` metadata key is present the tile data MUST be in that format.
 
 ### Grids
 
