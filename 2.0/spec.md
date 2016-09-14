@@ -53,10 +53,10 @@ The following keys are REQUIRED
 * `type`: `overlay` or `baselayer`
 * `version`: The version of the tileset, as a plain number.
 * `description`: A description of the layer as plain text.
-
-The following keys are RECOMMENDED
-
 * `format`: The MIME format of the tile data.
+
+The following keys is RECOMMENDED
+
 * `compression`: The type of compression applied on top of the tile data. The value SHALL a valid [HTTP Content](http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding) name.
 
   Decoders MAY assume per-format defaults if the key is not present.
