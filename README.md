@@ -22,11 +22,6 @@ for compliance.
 
 # Changelog
 
-## Roadmap
-
-* The format will switch tile ordering to the XYZ schema popularized by
-  OpenStreetMap and away from the Tile Map Service specification.
-
 ## 2.0
 
 * Allow data other than PNG and JPEG images to be stored in tilesets
