@@ -54,19 +54,9 @@ The following keys are REQUIRED
 * `version`: The version of the tileset, as a plain number.
 * `description`: A description of the layer as plain text.
 
-The following key is RECOMMENDED
+The following keys are RECOMMENDED
 
-* `format`: The file format of the tile data.
-
-  If the format is one of the following common formats, the string given in this table list SHOULD be used
-
-  * `jpg` for JPEG images
-  * `png` for PNG images
-  * `geojson` for [GeoJSON](http://geojson.org/) encoded data
-  * `topojson` for [TopoJSON](https://github.com/mbostock/topojson) encoded data
-  * `o5m` for [o5m](http://wiki.openstreetmap.org/wiki/O5m) encoded data in the OpenStreetMap data model
-  * `mvt` for [Mapbox Vector Tiles](https://github.com/mapbox/vector-tile-spec)
-
+* `format`: The MIME format of the tile data.
 * `compression`: The type of compression applied on top of the tile data. The value SHALL a valid [HTTP Content](http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding) name.
 
   Decoders MAY assume per-format defaults if the key is not present.
