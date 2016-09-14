@@ -27,10 +27,16 @@ for compliance.
 * The format will switch tile ordering to the XYZ schema popularized by
   OpenStreetMap and away from the Tile Map Service specification.
 
+## 2.0
+
+* Allow data other than PNG and JPEG images to be stored in tilesets
+* Use MIME type for `format` metadata.
+* Added RECOMMENDED `compression` metadata.
+
 ## 1.1
 
-* `name='format'` row **required** in `metadata` table.
-* `name='bounds'` row suggested in `metadata` table.
+* Made `format` metadata REQUIRED.
+* Added OPTIONAL `bounds` metadata.
 * optional UTFGrid-based interaction spec.
 
 # Concept
