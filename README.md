@@ -37,7 +37,7 @@ for compliance.
 # Concept
 
 MBTiles is a compact, restrictive specification. It supports only
-tiled data, including image tiles and interactivity grid tiles. Only the
+tiled data, including arbitrary tile data and interactivity grid tiles. Only the
 Spherical Mercator projection is supported for presentation - tile display -
 and only latitude-longitude coordinates are supported for metadata such
 as bounds and centers.
@@ -46,9 +46,12 @@ It is a minimum specification - only specifying the ways in which data
 must be retrievable. Thus MBTiles files can internally compress and optimize
 data, and construct views that adhere to the MBTiles specification.
 
+As a container format for arbitrary tiled data different implementations can
+use it for storing different types of data
+
 Unlike [Spatialite](http://www.gaia-gis.it/spatialite/), GeoJSON,
 and Rasterlite, MBTiles is not raw data storage - it is storage
-for presentational data, like rendered map tiles.
+for tiled data, like rendered map tiles.
 
 One MBTiles file represents a single tileset, optionally including grids
 of interactivity data. Multiple tilesets - layers, or maps in other terms,
