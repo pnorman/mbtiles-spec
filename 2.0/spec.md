@@ -91,7 +91,7 @@ The `zoom_level`, `tile_column`, and `tile_row` columns MUST the
 their construction, except the [global-mercator](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-mercator) (aka Spherical Mercator) MUST be used.
 The `tile_row` coordinate is different from the `y` coordinate in the XYZ schema popularized by Google and OpenStreetMap.
 
-The `tile_data blob` column contains raw tile data in binary. If the `compression` metadata keys is present the tile data MUST be in compression. If it is not present all tile data MUST still be in the same compression.
+The `tile_data blob` column contains raw tile data in binary. If the `compression` metadata key is present the tile data MUST be in that compression. If it is not present all tile data for different tiles MUST still be in the same compression.
 
 ### Grids
 
