@@ -50,8 +50,6 @@ The metadata table is used as a key/value store for settings.
 The following keys are REQUIRED
 
 * `name`: The plain-english name of the tileset.
-* `type`: `overlay` or `baselayer`
-* `version`: The version of the tileset, as a plain number.
 * `description`: A description of the layer as plain text.
 * `format`: The MIME format of the tile data.
 
@@ -69,6 +67,8 @@ The following keys are OPTIONAL
   **left, bottom, right, top**. Example of the full earth: `-180.0,-85,180,85`.
 * `attribution`: An attribution string, which explains in English (and HTML) the sources of
   data and/or style for the map.
+* `version`: The version of the tileset, as a plain number.
+* `type`: `overlay` or `baselayer`
 
 Additional keys MAY be added, such as those in [UTFGrid-based interaction](https://github.com/mapbox/utfgrid-spec).
 
