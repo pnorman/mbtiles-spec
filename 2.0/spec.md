@@ -16,6 +16,19 @@ MBTiles is a specification for storing tiled map data in
 MBTiles files, known as **tilesets**, MUST implement the specification below
 to ensure compatibility with devices.
 
+## Compatibility
+*This section is informative and does not add requirements to implementations*
+
+Because views may be used to produce the MBTiles schema two implementations
+may store tiles with different internal details, meaning one implementation
+may not be able to add to an existing file.
+
+As a container format, MBTiles can store any tiled data, so data can be stored
+that an implementation cannot do anything with. Additionally, an implementation
+is not required to handle all compressions the spec allows.
+
+Relying metadata keys not in the specification can cause compatibility problems.
+
 ## Database Specifications
 
 Tilesets SHALL be valid SQLite databases of
