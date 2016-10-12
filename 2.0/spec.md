@@ -78,6 +78,9 @@ The following keys are OPTIONAL
   area covered by all zoom levels. The bounds are represented in `WGS:84` -
   latitude and longitude values, in the OpenLayers Bounds format -
   **left, bottom, right, top**. Example of the full earth: `-180.0,-85,180,85`.
+* `center`: The longitude, latitude, and zoom level of the default view of the map. Example: -1.48,51.87,13
+* `minzoom`: The lowest zoom level for which the tileset provides data. If present there MUST be no tiles with a lower `zoom_level`.
+* `maxzoom`: The highest zoom level for which the tileset provides data. If present there MUST be no tiles with a higher `zoom_level`.
 * `attribution`: An attribution string, which explains in English (and HTML) the sources of
   data and/or style for the map.
 * `version`: The version of the tileset, as a plain number.
