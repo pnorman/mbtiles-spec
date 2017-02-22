@@ -62,7 +62,7 @@ The metadata table is used as a key/value store for settings.
 
 The following keys are REQUIRED
 
-* `name`: The plain-english name of the tileset.
+* `name`: The natural language name of the tileset.
 * `description`: A description of the layer as plain text.
 * `format`: The MIME format of the tile data.
 
