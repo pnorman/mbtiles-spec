@@ -83,7 +83,7 @@ The following keys are OPTIONAL
 * `maxzoom`: The highest zoom level for which the tileset provides data. If present there MUST be no tiles with a higher `zoom_level`.
 * `attribution`: An attribution string, which explains in English (and HTML) the sources of
   data and/or style for the map.
-* `version`: The version of the tileset, as a plain number.
+* `version`: The version of the tileset, as a plain number. This refers to a revision of the tileset itself, not of the MBTiles specification.
 * `type`: `overlay` or `baselayer`
 
 Additional keys MAY be added, such as those in [UTFGrid-based interaction](https://github.com/mapbox/utfgrid-spec).
